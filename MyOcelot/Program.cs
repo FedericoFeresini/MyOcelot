@@ -20,6 +20,12 @@ namespace MyOcelot
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.ConfigureAppConfiguration((host, config) => {
+                        config
+                            //.SetBasePath(AppContext.BaseDirectory)
+                            //.AddJsonFile("appsettings.json", false, true)
+                            .AddJsonFile("ocelot.json", false, true);
+                    });
                     webBuilder.UseStartup<Startup>();
                 });
     }
