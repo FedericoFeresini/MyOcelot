@@ -2,8 +2,7 @@
 # NuGet restore															
  FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build						
  WORKDIR /src 																
- COPY *.sln . 																
- COPY MyOcelot.UnitTests/*.csproj MyOcelot.UnitTests/ 	
+ COPY *.sln . 																 	
  COPY MyOcelot/*.csproj MyOcelot/ 						
  RUN dotnet restore 														
  COPY . . 																	
