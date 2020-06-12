@@ -9,7 +9,7 @@
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/prova",
+      "UpstreamPathTemplate": "/Identity/Account/Register",
       "UpstreamHttpMethod": [ "GET" ]
     }
   ],
