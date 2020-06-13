@@ -36,6 +36,10 @@ namespace MyOcelot
             {
                app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseHsts();
+            }
 
             app.UseHttpsRedirection();
             app.UseOcelot().Wait();
