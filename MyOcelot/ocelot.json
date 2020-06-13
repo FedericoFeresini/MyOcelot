@@ -1,19 +1,19 @@
 {
-  "ReRoutes": [
+  "Routes": [
     {
       "DownstreamPathTemplate": "/Identity/Account/Register",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "curami.herokuapp.com",
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/Identity/Account/Register",
+      "UpstreamPathTemplate": "/gateway/register",
       "UpstreamHttpMethod": [ "Get" ]
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost"
+    "BaseUrl": "https://localhost:5000"
   }
 }

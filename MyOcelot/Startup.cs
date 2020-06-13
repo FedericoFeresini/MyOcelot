@@ -34,7 +34,7 @@ namespace MyOcelot
         {
             if (env.IsDevelopment())
             {
-               // app.UseDeveloperExceptionPage();
+               app.UseDeveloperExceptionPage();
             }
 
             app.UseHttpsRedirection();

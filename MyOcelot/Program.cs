@@ -22,9 +22,10 @@ namespace MyOcelot
                 {
                     webBuilder.ConfigureAppConfiguration((host, config) => {
                         config
-                            //.SetBasePath(AppContext.BaseDirectory)
-                            //.AddJsonFile("appsettings.json", false, true)
-                            .AddJsonFile("ocelot.json", false, true);
+                            .SetBasePath(AppContext.BaseDirectory)
+                            .AddJsonFile("appsettings.json", false, true)
+                            .AddJsonFile("ocelot.json", false, true)
+                            .Build();
                     });
                     webBuilder.UseStartup<Startup>();
                 });
