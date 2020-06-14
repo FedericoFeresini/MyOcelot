@@ -34,9 +34,8 @@ Client- -------->   OCELOT
 Per farlo creo semplicemente due progetti WebAPI con Visual studio.
 
 #### Se intendiamo fare esperimenti in locale, serve che questi due microservizi API, quando lanciati sulla stessa macchina, girino su porte diverse. Per farlo basta moficiare il file launchSettings.json <br/>
-**launchSettings.json** di CatalogAPI
 <details>
-<summary>**launchSettings.json** di CatalogAPI</summary>
+<summary>,<p>**launchSettings.json** di CatalogAPI<p></summary>
 <p>
 
 ```bash
@@ -56,9 +55,8 @@ Per farlo creo semplicemente due progetti WebAPI con Visual studio.
 </p>
 </details>
 
-**launchSettings.json** di OrdersAPI
 <details>
-<summary>**launchSettings.json** di OrdersAPI</summary>
+<summary><p>**launchSettings.json** di OrdersAPI<p></summary>
 <p>
 
 ```bash
