@@ -89,9 +89,11 @@ _O possiamo utilizzare direttamente il NuGet manager da Visual Studio_
 3. Creo il GatewayApi. Anche questo e'un altro progetto WebAPI indipendente dai precedenti.
  1. Crea il progetto 
  2. Modifica **Program.cs** perche' il programma venga lanciato con le configurazioni di Ocelot
- <details>
+
+<details>
 <summary><b>Program.cs</b> - Asp.Net Core 2.X</summary>
 <p>
+
 ```csharp
  //Asp.Net Core 2
  public class Program
