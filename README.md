@@ -35,7 +35,7 @@ Per farlo creo semplicemente due progetti WebAPI con Visual studio.
 
 #### Se intendiamo fare esperimenti in locale, serve che questi due microservizi API, quando lanciati sulla stessa macchina, girino su porte diverse. Per farlo basta moficiare il file launchSettings.json <br/>
 <details>
-<summary><b>launchSettings.json<b> di CatalogAPI</summary>
+<summary><b>launchSettings.json</b> di CatalogAPI</summary>
 <p>
 
 ```bash
