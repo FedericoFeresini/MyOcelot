@@ -3,6 +3,7 @@
 ## API Gateway open source in .NET Core.
 <details>
 <summary>Offre i seguenti servizi</summary>
+<p>
 * Routing
 * Request Aggregation
 * Server discovery
@@ -12,6 +13,7 @@
 * Caching
 * Load balancing
 * Logging
+</p>
 </details>
 
 Per capire come si usa immaginiamo di creare due applicazioni API:
@@ -33,6 +35,10 @@ Per farlo creo semplicemente due progetti WebAPI con Visual studio.
 
 #### Se intendiamo fare esperimenti in locale, serve che questi due microservizi API, quando lanciati sulla stessa macchina, girino su porte diverse. Per farlo basta moficiare il file launchSettings.json <br/>
 **launchSettings.json** di CatalogAPI
+<details>
+<summary>**launchSettings.json** di CatalogAPI</summary>
+<p>
+
 ```bash
 [...]
 
@@ -47,7 +53,14 @@ Per farlo creo semplicemente due progetti WebAPI con Visual studio.
 
 [...]
 ```
+</p>
+</details>
+
 **launchSettings.json** di OrdersAPI
+<details>
+<summary>**launchSettings.json** di OrdersAPI</summary>
+<p>
+
 ```bash
 [...]
 
@@ -62,6 +75,9 @@ Per farlo creo semplicemente due progetti WebAPI con Visual studio.
 
 [...]
 ```
+</p>
+</details>
+
 Cosi facendo, una volta lanciati, avremo: 
 * OrdersAPI sulla porta 7001
 * CatalogAPI sulla porta 7000
