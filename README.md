@@ -35,7 +35,7 @@ Per farlo creo semplicemente due progetti WebAPI con Visual studio.
 
 #### Se intendiamo fare esperimenti in locale, serve che questi due microservizi API, quando lanciati sulla stessa macchina, girino su porte diverse. Per farlo basta moficiare il file launchSettings.json <br/>
 <details>
-<summary><p>**launchSettings.json** di CatalogAPI</p></summary>
+<summary><b>launchSettings.json<b> di CatalogAPI</summary>
 <p>
 
 ```bash
@@ -56,7 +56,7 @@ Per farlo creo semplicemente due progetti WebAPI con Visual studio.
 </details>
 
 <details>
-<summary><b>**launchSettings.json** di OrdersAPI</b></summary>
+<summary><b>launchSettings.json</b> di OrdersAPI</summary>
 <p>
 
 ```bash
@@ -89,6 +89,9 @@ _O possiamo utilizzare direttamente il NuGet manager da Visual Studio_
 3. Creo il GatewayApi. Anche questo e'un altro progetto WebAPI indipendente dai precedenti.
  1. Crea il progetto 
  2. Modifica **Program.cs** perche' il programma venga lanciato con le configurazioni di Ocelot
+ <details>
+<summary><b>Program.cs</b> - Asp.Net Core 2.X</summary>
+<p>
 ```csharp
  //Asp.Net Core 2
  public class Program
@@ -111,9 +114,15 @@ _O possiamo utilizzare direttamente il NuGet manager da Visual Studio_
             .UseStartup<Startup>();
     }
 ```
+</p>
+</details>
+
 Verra' utilizzato il file _ocelot.json_ per configurare GatewayAPI quando viene lanciato.
 
 #### NB: In Asp.Net Core 3.0 WebHost e' stato sostituito con il piu generico Host. Come tale in un progetto Asp.Net Core 3.0 Program.cs risulterebbe: <br/>
+ <details>
+<summary><b>Program.cs</b> - Asp.Net Core 3.X</summary>
+<p>
 
 ```csharp
     //Asp.Net Core 3
@@ -140,7 +149,15 @@ Verra' utilizzato il file _ocelot.json_ per configurare GatewayAPI quando viene 
                 });
     }
 ```
-	3. Aggiungi il Middleware di Ocelot in **Startup.cs**
+</p>
+</details>
+
+3. Aggiungi il Middleware di Ocelot in **Startup.cs**
+ 
+<details>
+<summary><b>Startup.cs</b></summary>
+<p>
+
 ```csharp
     public class Startup
     {
@@ -181,9 +198,13 @@ Verra' utilizzato il file _ocelot.json_ per configurare GatewayAPI quando viene 
         }
     }
 ```
+</p>
+</details>
 
 4. Andiamo ora a vedere come creare il file di configurazione _ocelot.json_
-**ocelot.json**
+<details>
+<summary><b>ocelot.json</b></summary>
+<p>
 ```json
 {
   "ReRoutes": [
@@ -227,6 +248,9 @@ Verra' utilizzato il file _ocelot.json_ per configurare GatewayAPI quando viene 
     }
   }
 ```
+</p>
+</details>
+
 Parti salienti:
 * **"ReRoutes": []** - In questa sezione viene spiegato il comportamento di Ocelot per le chiamate che arrivano
 	* **UpstreamPathTemplate** - Enpoint del Gateway
