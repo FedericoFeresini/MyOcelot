@@ -21,13 +21,13 @@ E poi creare il Gateway che gestisce le chiamate e le reidirizza al servizio cor
 
 1. Creo i due microservizi indipendenti che vogliamo mettere dietro al nostro Gateway creato con Ocelot (CatalogAPI e OrdersAPI):
 ```bash
-								      -----------> CatalogAPI
-								      |
-							       	|
-Client ------->	OCELOT 
-								      |
-								      |
-								      -----------> OrderesAPI		
+                      -----------> CatalogAPI
+                      |
+                      |
+Client- -------->   OCELOT 
+                      |
+                      |
+                      -----------> OrderesAPI   
 ```
 Per farlo creo semplicemente due progetti WebAPI con Visual studio.
 
