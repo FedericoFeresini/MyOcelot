@@ -204,9 +204,11 @@ Verra' utilizzato il file _ocelot.json_ per configurare GatewayAPI quando viene 
 </details>
 
 4. Andiamo ora a vedere come creare il file di configurazione _ocelot.json_
+
 <details>
 <summary><b>ocelot.json</b></summary>
 <p>
+  
 ```json
 {
   "ReRoutes": [
